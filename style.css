@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------ global button's css ---------- */
+
+.btn {
+  padding: 14px 30px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: #ff5e35;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 30px;
+  transition: 0.2s ease-in-out;
+}
+.btn:hover {
+  box-shadow: 0 2px 15px 1px #7c7c7c;
+}
+
+/* -------------------------------- */
+
+/* ---------- NAVBAR ------------ */
+nav {
+  padding: 30px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 100px;
+  cursor: pointer;
+}
+nav .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+nav .list .list-item {
+  margin: 0 30px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+nav .list .list-item.active {
+  font-weight: 500;
+  color: #ff4516;
+}
+nav .feature-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+nav .feature-icons li img {
+  margin: 0 10px;
+  cursor: pointer;
+}
+nav .feature-icons li img:hover {
+  color: #ff4516;
+}
+
+/* ------------------------------ */
+
+.container {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .container-left .headings h3 {
+  margin: 40px 0 0 0;
+  position: relative;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.container .container-left .headings h3::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 270px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 30px;
+}
+.container .container-left .headings h3::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 285px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 30px;
+}
+.container .container-left .headings h1 {
+  font-size: 70px;
+  letter-spacing: 2px;
+  font-family: "Fredoka One", sans-serif;
+}
+.container .container-left .product-features {
+  margin: 30px 80px;
+}
+.container .container-left .product-features li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.container .container-left .product-features li i {
+  padding: 5px 0;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background: #ff5e35;
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
+}
+.container .container-left .product-features li h4 {
+  margin: 10px 20px;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.container .container-left .product-description p {
+  margin: 40px 0;
+  width: 695px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: #bababa;
+}
+.container .container-left .buttons .btn {
+  margin: 0 25px 0 0;
+}
+.container .container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .container-right .product-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .container-right .product-image img.product {
+  width: 480px;
+  transition: 0.2s;
+}
+.container .container-right .product-image img.badge {
+  position: absolute;
+  left: -40px;
+  bottom: 40px;
+  width: 140px;
+}
+.container .container-right .product-colors {
+  margin: 0 0 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .container-right .product-colors span {
+  margin: 0 15px;
+  width: 28px;
+  height: 28px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+.container .container-right .product-colors span:hover {
+  box-shadow: 0 4px 5px #7c7c7c;
+}
+.container .container-right .product-colors span:nth-child(1) {
+  background: #fbd101;
+}
+.container .container-right .product-colors span:nth-child(2) {
+  background: #ff5e35;
+}
+.container .container-right .product-colors span:nth-child(3) {
+  background: #000;
+}
