@@ -261,6 +261,9 @@ nav .menu-icon {
   .container .container-left .headings h3::after {
     left: 245px;
   }
+  .container .container-left .buttons {
+    justify-content: space-between;
+  }
   .container .container-right .product-image img.product {
     width: 50vw;
   }
