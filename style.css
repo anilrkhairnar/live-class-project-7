@@ -8,7 +8,7 @@
 
 .btn {
   padding: 14px 30px;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background: #ff5e35;
@@ -16,10 +16,10 @@
   outline: none;
   color: #fff;
   border-radius: 30px;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s linear;
 }
 .btn:hover {
-  box-shadow: 0 2px 15px 1px #7c7c7c;
+  box-shadow: 0 10px 20px -7px #00000061;
 }
 
 /* -------------------------------- */
@@ -40,16 +40,18 @@ nav .list {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  gap: 1.8rem;
 }
 nav .list .list-item {
-  margin: 0 30px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
-
+nav .list .list-item:hover {
+  color: #ff4516;
+}
 nav .list .list-item.active {
   font-weight: 500;
   color: #ff4516;
@@ -59,15 +61,17 @@ nav .feature-icons {
   justify-content: center;
   align-items: center;
   list-style: none;
+  gap: 1rem;
 }
 nav .feature-icons li img {
-  margin: 0 10px;
   cursor: pointer;
 }
 nav .feature-icons li img:hover {
   color: #ff4516;
 }
-
+nav .menu-icon {
+  display: none;
+}
 /* ------------------------------ */
 
 .container {
@@ -79,7 +83,7 @@ nav .feature-icons li img:hover {
 .container .container-left .headings h3 {
   margin: 40px 0 0 0;
   position: relative;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
@@ -104,12 +108,12 @@ nav .feature-icons li img:hover {
   border-radius: 30px;
 }
 .container .container-left .headings h1 {
-  font-size: 70px;
+  font-size: 4.3rem;
   letter-spacing: 2px;
   font-family: "Fredoka One", sans-serif;
 }
 .container .container-left .product-features {
-  margin: 30px 80px;
+  margin: 1.8rem 0 0 5rem;
 }
 .container .container-left .product-features li {
   display: flex;
@@ -128,19 +132,20 @@ nav .feature-icons li img:hover {
 }
 .container .container-left .product-features li h4 {
   margin: 10px 20px;
-  font-size: 25px;
+  font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 .container .container-left .product-description p {
   margin: 40px 0;
-  width: 695px;
-  font-size: 14px;
+  width: 90%;
+  font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
   color: #bababa;
 }
-.container .container-left .buttons .btn {
-  margin: 0 25px 0 0;
+.container .container-left .buttons {
+  display: flex;
+  gap: 1.25rem;
 }
 .container .container-right {
   display: flex;
@@ -155,23 +160,23 @@ nav .feature-icons li img:hover {
   align-items: center;
 }
 .container .container-right .product-image img.product {
-  width: 480px;
+  width: 35vw;
   transition: 0.2s;
 }
 .container .container-right .product-image img.badge {
   position: absolute;
   left: -40px;
   bottom: 40px;
-  width: 140px;
+  width: 12vw;
 }
 .container .container-right .product-colors {
-  margin: 0 0 40px 0;
+  margin: 10px 0 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 .container .container-right .product-colors span {
-  margin: 0 15px;
   width: 28px;
   height: 28px;
   border-radius: 15px;
@@ -189,4 +194,82 @@ nav .feature-icons li img:hover {
 }
 .container .container-right .product-colors span:nth-child(3) {
   background: #000;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 1024px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  nav {
+    padding: 20px 5%;
+  }
+  nav .logo {
+    width: 5rem;
+  }
+  nav .list .list-item {
+    font-size: 1rem;
+  }
+  nav .feature-icons li img {
+    width: 1rem;
+  }
+
+  .container {
+    padding: 0 5%;
+  }
+  .container .container-left .headings h3 {
+    font-size: 2.1rem;
+  }
+  .container .container-left .headings h1 {
+    font-size: 2.5rem;
+  }
+  .container .container-left .product-features {
+    margin-left: 1rem;
+  }
+  .container .container-left .product-features li i {
+    padding: 3px 0;
+    width: 25px;
+    height: 25px;
+  }
+  .container .container-left .product-features li h4 {
+    font-size: 1rem;
+  }
+  .container .container-left .product-description p {
+    margin: 25px 0;
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  nav .list,
+  nav .feature-icons {
+    display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .container {
+    padding: 5%;
+    flex-direction: column-reverse;
+  }
+  .container .container-left .headings h3::before {
+    left: 230px;
+  }
+  .container .container-left .headings h3::after {
+    left: 245px;
+  }
+  .container .container-right .product-image img.product {
+    width: 50vw;
+  }
+  .container .container-right .product-image img.badge {
+    left: -5px;
+    width: 10vw;
+  }
+  .container .container-right .product-colors span {
+    width: 20px;
+    height: 20px;
+  }
 }
